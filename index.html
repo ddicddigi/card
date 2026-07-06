@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>김태헌 | 웹 명함</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="bg-shapes" aria-hidden="true">
+    <span class="shape shape-1"></span>
+    <span class="shape shape-2"></span>
+    <span class="shape shape-3"></span>
+  </div>
+
+  <main class="card-wrapper">
+    <article class="card" id="card">
+      <div class="card-glow" aria-hidden="true"></div>
+
+      <header class="card-header">
+        <div class="avatar" aria-label="김태헌 캐릭터 프로필">
+          <svg class="character" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="avatarTitle">
+            <title id="avatarTitle">김태헌 캐릭터</title>
+            <defs>
+              <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#1a1a2e"/>
+                <stop offset="100%" stop-color="#16213e"/>
+              </linearGradient>
+              <linearGradient id="suitGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#2d3561"/>
+                <stop offset="100%" stop-color="#1a1f3c"/>
+              </linearGradient>
+              <linearGradient id="hairGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#1a1a1a"/>
+                <stop offset="100%" stop-color="#2c2c2c"/>
+              </linearGradient>
+              <linearGradient id="aiGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#6366f1" stop-opacity="0.6"/>
+                <stop offset="50%" stop-color="#06b6d4" stop-opacity="0.4"/>
+                <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0.6"/>
+              </linearGradient>
+              <filter id="glow">
+                <feGaussianBlur stdDeviation="2" result="blur"/>
+                <feMerge>
+                  <feMergeNode in="blur"/>
+                  <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+              </filter>
+            </defs>
+
+            <!-- 배경 -->
+            <circle cx="100" cy="100" r="95" fill="url(#bgGrad)"/>
+            <!-- AI 네트워크 장식 -->
+            <g class="ai-nodes" opacity="0.5">
+              <circle cx="40" cy="50" r="3" fill="#6366f1"/>
+              <circle cx="160" cy="45" r="3" fill="#06b6d4"/>
+              <circle cx="30" cy="130" r="2.5" fill="#8b5cf6"/>
+              <circle cx="170" cy="120" r="2.5" fill="#6366f1"/>
+              <line x1="40" y1="50" x2="100" y2="80" stroke="#6366f1" stroke-width="0.8" opacity="0.4"/>
+              <line x1="160" y1="45" x2="100" y2="80" stroke="#06b6d4" stroke-width="0.8" opacity="0.4"/>
+              <line x1="30" y1="130" x2="100" y2="100" stroke="#8b5cf6" stroke-width="0.8" opacity="0.4"/>
+              <line x1="170" y1="120" x2="100" y2="100" stroke="#6366f1" stroke-width="0.8" opacity="0.4"/>
+            </g>
+            <!-- 후광 -->
+            <ellipse cx="100" cy="85" rx="60" ry="55" fill="url(#aiGlow)" opacity="0.25" filter="url(#glow)"/>
+
+            <!-- 어깨/수트 -->
+            <path d="M30 175 Q100 155 170 175 L180 200 L20 200 Z" fill="url(#suitGrad)"/>
+            <path d="M75 168 L100 185 L125 168" stroke="#4a5580" stroke-width="1.5" fill="none"/>
+            <!-- 셔츠 -->
+            <path d="M82 168 L100 190 L118 168 L115 200 L85 200 Z" fill="#e8eaf0"/>
+            <!-- 넥타이 -->
+            <path d="M96 168 L100 195 L104 168 Z" fill="#6366f1"/>
+            <path d="M97 168 L100 178 L103 168" fill="#4f46e5"/>
+
+            <!-- 목 -->
+            <rect x="86" y="138" width="28" height="32" rx="4" fill="#F5C9A8"/>
+
+            <!-- 얼굴 -->
+            <ellipse cx="100" cy="90" rx="48" ry="52" fill="#F5C9A8"/>
+
+            <!-- 귀 -->
+            <ellipse cx="52" cy="94" rx="7" ry="11" fill="#E8B89D"/>
+            <ellipse cx="148" cy="94" rx="7" ry="11" fill="#E8B89D"/>
+
+            <!-- 헤어 (스타일리시 투블록) -->
+            <path d="M52 78 Q54 28 100 24 Q146 28 148 78 Q145 55 100 50 Q55 55 52 78" fill="url(#hairGrad)"/>
+            <path d="M52 78 Q48 100 54 115 L60 108 Q56 90 54 78" fill="url(#hairGrad)"/>
+            <path d="M148 78 Q152 100 146 115 L140 108 Q144 90 146 78" fill="url(#hairGrad)"/>
+            <!-- 앞머리 -->
+            <path d="M72 52 Q85 48 100 50 Q115 48 128 52 Q120 62 100 58 Q80 62 72 52" fill="#1a1a1a"/>
+
+            <!-- 눈썹 (자신감 있는 각) -->
+            <path d="M68 78 L88 74" stroke="#1a1a1a" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+            <path d="M112 74 L132 78" stroke="#1a1a1a" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+            <!-- 눈 (날카로운 CEO 눈빛) -->
+            <ellipse cx="78" cy="90" rx="9" ry="10" fill="#fff"/>
+            <ellipse cx="122" cy="90" rx="9" ry="10" fill="#fff"/>
+            <circle class="eye-pupil" cx="80" cy="91" r="5.5" fill="#1a1a2e"/>
+            <circle class="eye-pupil" cx="124" cy="91" r="5.5" fill="#1a1a2e"/>
+            <circle cx="82" cy="88.5" r="2" fill="#fff"/>
+            <circle cx="126" cy="88.5" r="2" fill="#fff"/>
+
+            <!-- 코 -->
+            <path d="M100 96 L97 104 Q100 106 103 104 Z" fill="#E0A882"/>
+
+            <!-- 입 (자신감 있는 미소) -->
+            <path class="mouth" d="M86 114 Q100 124 114 114" stroke="#C97B7B" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+            <!-- AI 스마트 글래스 -->
+            <path d="M58 86 Q78 82 98 86 L98 90 Q78 86 58 90 Z" fill="rgba(99,102,241,0.15)" stroke="#6366f1" stroke-width="1.2"/>
+            <path d="M102 86 Q122 82 142 86 L142 90 Q122 86 102 90 Z" fill="rgba(99,102,241,0.15)" stroke="#6366f1" stroke-width="1.2"/>
+            <line x1="98" y1="88" x2="102" y2="88" stroke="#6366f1" stroke-width="1.2"/>
+            <!-- 글래스 반사 -->
+            <line x1="65" y1="87" x2="75" y2="87" stroke="#06b6d4" stroke-width="1" opacity="0.7"/>
+            <line x1="125" y1="87" x2="135" y2="87" stroke="#06b6d4" stroke-width="1" opacity="0.7"/>
+
+            <!-- AI 칩 배지 (수트 라펠) -->
+            <rect x="62" y="162" width="14" height="10" rx="2" fill="#6366f1" opacity="0.8"/>
+            <text x="69" y="170" text-anchor="middle" fill="#fff" font-size="5" font-family="monospace">AI</text>
+          </svg>
+          <span class="avatar-ring"></span>
+        </div>
+
+        <div class="intro">
+          <p class="badge">CEO · SideOnAI</p>
+          <h1 class="name">김태헌</h1>
+          <p class="role">SideOnAI 대표</p>
+          <p class="tagline">"AI와 함께 놀고 있습니다. 같이 노실 분?"</p>
+        </div>
+      </header>
+
+      <hr class="divider">
+
+      <section class="contact">
+        <a class="contact-item" href="mailto:th@sideonai.com" id="emailLink">
+          <span class="contact-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="4" width="20" height="16" rx="2"/>
+              <path d="M2 7l10 7 10-7"/>
+            </svg>
+          </span>
+          <span class="contact-text">
+            <span class="contact-label">Email</span>
+            <span class="contact-value">th@sideonai.com</span>
+          </span>
+          <span class="copy-hint">클릭하여 복사</span>
+        </a>
+
+        <a class="contact-item" href="tel:010-1111-1111">
+          <span class="contact-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+            </svg>
+          </span>
+          <span class="contact-text">
+            <span class="contact-label">Phone</span>
+            <span class="contact-value">010-1111-1111</span>
+          </span>
+        </a>
+      </section>
+
+      <footer class="card-footer">
+        <div class="social-buttons">
+          <a class="social-btn linkedin-btn" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 114.127 0 2.063 2.063 0 01-2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+            LinkedIn에서 연결하기
+          </a>
+
+          <a class="social-btn youtube-btn" href="https://www.youtube.com/@ai-study" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+            </svg>
+            YouTube 채널 보기
+          </a>
+        </div>
+
+        <div class="skills">
+          <span class="skill">AI</span>
+          <span class="skill">SideOnAI</span>
+          <span class="skill">Innovation</span>
+          <span class="skill">Leadership</span>
+        </div>
+      </footer>
+    </article>
+
+    <p class="toast" id="toast" role="status" aria-live="polite"></p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
